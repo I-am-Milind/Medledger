@@ -1,0 +1,161 @@
+.page {
+  min-height: 100dvh;
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page::before,
+.page::after {
+  content: '';
+  position: absolute;
+  width: 48vmax;
+  height: 48vmax;
+  border-radius: 50%;
+  opacity: 0.26;
+  filter: blur(22px);
+  animation: floatCloud 16s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+.page::before {
+  background: radial-gradient(circle, #1e88e5 0%, rgba(30, 136, 229, 0) 65%);
+  top: -24vmax;
+  right: -10vmax;
+}
+
+.page::after {
+  background: radial-gradient(circle, #26a69a 0%, rgba(38, 166, 154, 0) 70%);
+  bottom: -22vmax;
+  left: -12vmax;
+  animation-delay: 3s;
+}
+
+.panel {
+  width: min(1100px, 100%);
+  background: #fffffff0;
+  border: 1px solid #d4e5fb;
+  border-radius: 22px;
+  box-shadow: 0 24px 48px rgba(13, 27, 42, 0.12);
+  padding: 1.2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  margin-bottom: 1rem;
+}
+
+.headerTopRow {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 0.25rem;
+}
+
+.backButton {
+  text-decoration: none;
+  border: 1px solid #bdd8f8;
+  color: #1d568d;
+  background: #eef7ff;
+  border-radius: 10px;
+  padding: 0.42rem 0.74rem;
+  font-weight: 700;
+  font-size: 0.86rem;
+}
+
+.backButton:hover {
+  background: #e4f2ff;
+}
+
+.brandRow {
+  margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  margin: 0.4rem 0;
+  font-size: clamp(1.5rem, 2.6vw, 2.3rem);
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+.subtitle {
+  margin: 0;
+  color: #3d5f82;
+  max-width: 62ch;
+}
+
+.cards {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.card {
+  border: 1px solid #d6e8fb;
+  border-radius: 16px;
+  padding: 1rem;
+  background: linear-gradient(145deg, #ffffff 0%, #f8fbff 100%);
+  display: grid;
+  gap: 0.7rem;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(30, 136, 229, 0.1);
+}
+
+.cardTitle {
+  margin: 0;
+  color: var(--color-primary);
+}
+
+.cardText {
+  margin: 0;
+  color: #43698f;
+}
+
+.points {
+  margin: 0;
+  padding-left: 1rem;
+  color: #34587a;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.button {
+  justify-self: start;
+  text-decoration: none;
+  border: 0;
+  border-radius: 12px;
+  padding: 0.65rem 0.95rem;
+  color: #fff;
+  background: var(--color-primary);
+  font-weight: 700;
+}
+
+.buttonAlt {
+  background: var(--color-secondary);
+}
+
+@keyframes floatCloud {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(18px, -14px);
+  }
+}
+
+@media (min-width: 900px) {
+  .panel {
+    padding: 1.4rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,21 @@
+node_modules/
+*.log
+.DS_Store
+
+# build outputs
+dist/
+build/
+coverage/
+.vite/
+
+# env
+.env
+.env.*
+!.env.example
+
+# firebase / service accounts
+firebase-service-account.json
+
+# editor
+.vscode/
+.idea/

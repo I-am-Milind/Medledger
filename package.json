@@ -1,0 +1,27 @@
+{
+  "name": "medledger",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "npm@10",
+  "engines": {
+    "node": ">=20.19.0 || >=22.12.0"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n web,api -c cyan,green \"npm run dev --workspace @medledger/web\" \"npm run dev --workspace @medledger/api\"",
+    "dev:web": "npm run dev --workspace @medledger/web",
+    "dev:api": "npm run dev --workspace @medledger/api",
+    "build": "npm run build --workspace @medledger/api && npm run build --workspace @medledger/web",
+    "typecheck": "npm run typecheck --workspace @medledger/api && npm run typecheck --workspace @medledger/web",
+    "lint": "npm run lint --workspace @medledger/api && npm run lint --workspace @medledger/web",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write ."
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3"
+  }
+}

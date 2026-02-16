@@ -1,0 +1,42 @@
+:root {
+  --color-primary: #1E88E5;
+  --color-secondary: #26A69A;
+  --color-bg: #F5F9FF;
+  --color-text: #0D1B2A;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: radial-gradient(circle at top right, #e2efff 0%, var(--color-bg) 45%, #fcfdff 100%);
+  color: var(--color-text);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+.fullCenter {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+}

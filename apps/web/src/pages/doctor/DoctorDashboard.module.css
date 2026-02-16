@@ -1,0 +1,170 @@
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #d9e8ff;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 8px 24px rgba(30, 136, 229, 0.09);
+}
+
+.title {
+  margin: 0 0 0.7rem;
+  color: var(--color-primary);
+}
+
+.input,
+.select,
+.textarea {
+  border: 1px solid #c9dff8;
+  border-radius: 10px;
+  padding: 0.6rem 0.7rem;
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.button {
+  border: 0;
+  border-radius: 9px;
+  padding: 0.5rem 0.8rem;
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 700;
+}
+
+.buttonAlt {
+  background: var(--color-secondary);
+}
+
+.item {
+  border: 1px solid #d9e8ff;
+  border-radius: 10px;
+  background: #fbfdff;
+  padding: 0.7rem;
+  margin-top: 0.65rem;
+}
+
+.profileIdentity {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid #d9e8ff;
+  border-radius: 12px;
+  background: #f8fbff;
+  padding: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+
+.avatar {
+  width: 76px;
+  height: 76px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid #c8def8;
+  background: #fff;
+}
+
+.avatarPlaceholder {
+  width: 76px;
+  height: 76px;
+  border-radius: 14px;
+  border: 1px solid #c8def8;
+  background: #ecf5ff;
+  color: #1d5e97;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+}
+
+.identityLine {
+  margin: 0.12rem 0;
+}
+
+.docPreviewGrid {
+  margin-top: 0.6rem;
+  display: grid;
+  gap: 0.6rem;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.docPreviewCard {
+  border: 1px solid #d4e6fb;
+  border-radius: 12px;
+  background: #f9fcff;
+  padding: 0.45rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.docPreviewImage,
+.docPreviewFrame {
+  width: 100%;
+  height: 120px;
+  border: 1px solid #d5e6fc;
+  border-radius: 9px;
+  background: #fff;
+  object-fit: cover;
+}
+
+.docPreviewLink {
+  border: 1px dashed #b9d8f8;
+  border-radius: 9px;
+  min-height: 120px;
+  display: grid;
+  place-items: center;
+  color: #23598c;
+  text-decoration: none;
+  font-weight: 700;
+  background: #fff;
+}
+
+.docPreviewName {
+  margin: 0;
+  color: #2f5a80;
+  font-size: 0.76rem;
+}
+
+.imagePreviewCard {
+  border: 1px dashed #b8d8f7;
+  border-radius: 12px;
+  background: #f8fbff;
+  padding: 0.5rem;
+}
+
+.imagePreview {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid #c9dff8;
+  background: #ffffff;
+}
+
+.warn {
+  color: #9f3a00;
+  background: #fff2e0;
+  border: 1px solid #f6d3a3;
+  border-radius: 10px;
+  padding: 0.7rem;
+}
+
+.error {
+  color: #b42318;
+}
+
+@media (min-width: 980px) {
+  .grid {
+    grid-template-columns: 1.1fr 1fr;
+  }
+}

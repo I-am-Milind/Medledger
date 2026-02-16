@@ -1,0 +1,182 @@
+.page {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.requestsPanel {
+  align-content: start;
+}
+
+.searchLabel {
+  margin: 0;
+  color: #2d5f8e;
+  font-size: 0.79rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.searchField {
+  border: 1px solid #bdd8f8;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fcff 100%);
+  display: flex;
+  align-items: center;
+  min-height: 46px;
+  overflow: hidden;
+}
+
+.searchField:focus-within {
+  border-color: #52a3ea;
+  box-shadow: 0 0 0 3px rgba(38, 166, 154, 0.16);
+  background: #ffffff;
+}
+
+.searchIcon {
+  width: 2.5rem;
+  min-width: 2.5rem;
+  display: grid;
+  place-items: center;
+  color: #4e7698;
+}
+
+.searchIcon svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.searchInput {
+  width: 100%;
+  border: 0;
+  padding: 0.64rem 0.82rem 0.64rem 0;
+  background: transparent;
+  color: #0d1b2a;
+  font: inherit;
+}
+
+.searchInput:focus-visible {
+  outline: none;
+}
+
+.summaryRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.summaryLine {
+  margin: 0;
+  color: #2f5f8f;
+  font-weight: 700;
+}
+
+.list {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.compactCard {
+  border: 1px solid #d7e8fc;
+  border-radius: 12px;
+  background: #fbfdff;
+  overflow: hidden;
+}
+
+.cardHeaderButton {
+  border: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  padding: 0.62rem 0.7rem;
+  cursor: pointer;
+}
+
+.cardHeaderButton:hover {
+  background: linear-gradient(180deg, #fdfefe 0%, #eff7ff 100%);
+}
+
+.cardHeaderLeft {
+  min-width: 0;
+  display: grid;
+  gap: 0.12rem;
+  text-align: left;
+}
+
+.cardHeaderRight {
+  display: flex;
+  align-items: center;
+  gap: 0.42rem;
+}
+
+.expandLabel {
+  color: #2d628f;
+  font-size: 0.79rem;
+  font-weight: 800;
+}
+
+.cardBody {
+  border-top: 1px solid #e1eeff;
+  background: #fbfdff;
+  padding: 0.62rem 0.7rem 0.72rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.itemTitle {
+  margin: 0;
+  color: #19466e;
+  font-weight: 800;
+}
+
+.itemMeta {
+  margin: 0;
+  color: #4d7191;
+  font-size: 0.82rem;
+}
+
+.itemLine {
+  margin: 0;
+  color: #3a6387;
+  font-size: 0.9rem;
+}
+
+.linkButton {
+  border: 0;
+  border-radius: 10px;
+  padding: 0.56rem 0.8rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  justify-self: start;
+}
+
+.empty {
+  margin: 0;
+  color: #3f6689;
+}
+
+.error {
+  margin: 0;
+  color: #b42318;
+}
+
+@media (min-width: 1120px) {
+  .requestsPanel {
+    min-height: 74dvh;
+    max-height: 74dvh;
+    overflow: hidden;
+  }
+
+  .list {
+    min-height: 0;
+    max-height: calc(74dvh - 184px);
+    overflow-y: auto;
+    padding-right: 0.2rem;
+    align-content: start;
+  }
+}

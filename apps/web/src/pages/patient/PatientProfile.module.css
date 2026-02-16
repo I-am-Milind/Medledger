@@ -1,0 +1,404 @@
+.wrap {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid #d6e7fd;
+  border-radius: 18px;
+  padding: 1rem;
+  box-shadow:
+    0 12px 28px rgba(16, 39, 63, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  display: grid;
+  gap: 0.95rem;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.title {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: clamp(1.3rem, 2vw, 2rem);
+}
+
+.subtitle {
+  margin: 0.3rem 0 0;
+  color: #3b6489;
+}
+
+.profileHero {
+  border: 1px solid #d4e6fb;
+  border-radius: 14px;
+  background: #f8fcff;
+  padding: 0.9rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.identityCard {
+  border: 1px solid #d4e6fb;
+  border-radius: 12px;
+  background: #fff;
+  padding: 0.7rem;
+  display: grid;
+  gap: 0.55rem;
+  align-content: start;
+  justify-items: center;
+}
+
+.avatarPanel {
+  display: grid;
+  gap: 0.55rem;
+  justify-items: center;
+}
+
+.avatarAction {
+  position: relative;
+  width: 132px;
+  height: 132px;
+  border-radius: 18px;
+  border: 2px solid #b8d8f8;
+  background: #f8fcff;
+  padding: 4px;
+  cursor: pointer;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.avatarAction:hover {
+  border-color: #90c1ef;
+}
+
+.avatarAction:focus-visible {
+  outline: none;
+  border-color: #58a9ed;
+  box-shadow: 0 0 0 3px rgba(38, 166, 154, 0.2);
+}
+
+.heroAvatar,
+.heroAvatarFallback {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  border: 1px solid #c5defa;
+  object-fit: cover;
+}
+
+.heroAvatarFallback {
+  display: grid;
+  place-items: center;
+  color: #1e5f95;
+  background: linear-gradient(145deg, #eaf4ff, #f8fcff);
+  font-weight: 800;
+  font-size: 1.45rem;
+}
+
+.avatarEditBadge {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  border-radius: 999px;
+  border: 1px solid #b9d8f8;
+  background: #2f78bd;
+  color: #fff;
+  padding: 0.18rem 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.hiddenFileInput {
+  display: none;
+}
+
+.avatarMenu {
+  border: 1px solid #cde2fb;
+  border-radius: 10px;
+  background: #fff;
+  padding: 0.35rem;
+  display: grid;
+  gap: 0.35rem;
+  min-width: 200px;
+}
+
+.avatarMenuButton {
+  border: 1px solid #bfd9f8;
+  border-radius: 8px;
+  background: #f3f9ff;
+  color: #1f578c;
+  font-weight: 700;
+  padding: 0.42rem 0.58rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+.avatarMenuButton:hover {
+  border-color: #9fc8ee;
+  background: #ebf5ff;
+}
+
+.identityLabel {
+  margin: 0;
+  color: #3b6489;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.summaryPanel {
+  border: 1px solid #d4e6fb;
+  border-radius: 12px;
+  background: #fff;
+  padding: 0.7rem;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.summaryTitle {
+  margin: 0;
+  color: #1e4f7b;
+  font-size: 1rem;
+}
+
+.summaryGrid {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.summaryActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.summaryLine {
+  margin: 0;
+  color: #284f72;
+  border: 1px solid #d8e8fb;
+  border-radius: 10px;
+  background: #f8fcff;
+  padding: 0.5rem 0.6rem;
+  display: grid;
+  gap: 0.12rem;
+}
+
+.summaryLine span {
+  color: #456c90;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.summaryLine strong {
+  color: #1f4c77;
+  font-weight: 700;
+}
+
+.docHint {
+  margin: 0;
+  color: #496f93;
+  font-size: 0.92rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.row {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 700;
+  color: #234b6d;
+}
+
+.input,
+.textarea {
+  border: 1px solid #c6def8;
+  border-radius: 10px;
+  padding: 0.58rem 0.72rem;
+  background: #fbfdff;
+  color: #102439;
+}
+
+.input:focus-visible,
+.textarea:focus-visible {
+  outline: none;
+  border-color: #55a8ed;
+  box-shadow: 0 0 0 3px rgba(38, 166, 154, 0.2);
+  background: #fff;
+}
+
+.lockedInput {
+  background: #edf2f8;
+  border-color: #d2dfef;
+  color: #5a7087;
+  cursor: not-allowed;
+}
+
+.textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.button,
+.docButton {
+  border: 0;
+  border-radius: 9px;
+  padding: 0.55rem 0.84rem;
+  color: #fff;
+  font-weight: 700;
+  background: var(--color-primary);
+  cursor: pointer;
+}
+
+.buttonAlt {
+  background: var(--color-secondary);
+}
+
+.docButton {
+  justify-self: start;
+  background: #2f78bd;
+}
+
+.hereditarySection {
+  border: 1px solid #d4e6fb;
+  border-radius: 12px;
+  background: #fbfdff;
+  padding: 0.75rem;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.summaryHereditarySection {
+  margin-top: 0.15rem;
+}
+
+.hereditaryTitle {
+  margin: 0;
+  color: #1e4f7b;
+}
+
+.hereditaryEmpty {
+  margin: 0;
+  color: #456b8d;
+}
+
+.hereditaryInfoGrid {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.hereditaryInfoItem {
+  margin: 0;
+  border: 1px solid #d8e8fb;
+  border-radius: 10px;
+  background: #f8fcff;
+  padding: 0.45rem 0.55rem;
+  display: grid;
+  gap: 0.14rem;
+}
+
+.hereditaryInfoItem span {
+  color: #4a6f91;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+}
+
+.hereditaryInfoItem strong {
+  color: #1f4c77;
+  font-weight: 700;
+}
+
+.hereditaryNotes {
+  margin: 0;
+  border: 1px solid #d8e8fb;
+  border-radius: 10px;
+  background: #f8fcff;
+  padding: 0.5rem 0.6rem;
+  display: grid;
+  gap: 0.15rem;
+}
+
+.hereditaryNotes span {
+  color: #4a6f91;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+}
+
+.hereditaryNotes strong {
+  color: #1f4c77;
+  font-weight: 600;
+}
+
+.card {
+  border: 1px solid #d4e6fb;
+  border-radius: 12px;
+  padding: 0.75rem;
+  background: #fbfdff;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.previewCard {
+  border: 1px solid #d5e6fc;
+  border-radius: 10px;
+  background: #f8fbff;
+  padding: 0.55rem;
+}
+
+.previewImage,
+.previewFrame {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #cfe1fa;
+  display: block;
+  background: #fff;
+}
+
+.previewFrame {
+  min-height: 230px;
+}
+
+.error {
+  margin: 0;
+  color: #b42318;
+}
+
+@media (min-width: 860px) {
+  .row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .profileHero {
+    grid-template-columns: minmax(200px, 230px) 1fr;
+    align-items: start;
+  }
+
+  .summaryGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .hereditaryInfoGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

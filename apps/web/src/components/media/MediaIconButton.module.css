@@ -1,0 +1,28 @@
+.button {
+  border: 1px solid #b8d5f5;
+  border-radius: 10px;
+  width: 36px;
+  height: 36px;
+  display: inline-grid;
+  place-items: center;
+  background: #eef6ff;
+  color: #23639b;
+  cursor: pointer;
+  transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease;
+}
+
+.button:hover:not(:disabled) {
+  border-color: #90bbe9;
+  background: #e0efff;
+  color: #1a4d7c;
+}
+
+.button:disabled {
+  opacity: 0.52;
+  cursor: not-allowed;
+}
+
+.button svg {
+  width: 1rem;
+  height: 1rem;
+}

@@ -1,0 +1,83 @@
+.dashboard {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.stats {
+  display: grid;
+  gap: 0.65rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.error {
+  margin: 0;
+  border-radius: 10px;
+  border: 1px solid #efc5bf;
+  background: #fff2f0;
+  color: #aa281f;
+  padding: 0.58rem 0.72rem;
+}
+
+.empty {
+  margin: 0;
+  color: #476d8f;
+}
+
+.list {
+  display: grid;
+  gap: 0.72rem;
+}
+
+.item {
+  border: 1px solid #d5e7fd;
+  border-radius: 12px;
+  background: #fbfdff;
+  padding: 0.82rem;
+  display: grid;
+  gap: 0.44rem;
+}
+
+.itemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.name {
+  margin: 0;
+  color: #164770;
+  font-size: 1.02rem;
+  font-weight: 800;
+}
+
+.meta {
+  margin: 0;
+  color: #3f6485;
+  font-size: 0.92rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.approveButton,
+.denyButton {
+  border: 0;
+  border-radius: 10px;
+  padding: 0.56rem 0.8rem;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.approveButton {
+  background: #25a16f;
+}
+
+.denyButton {
+  background: #d03a3a;
+}

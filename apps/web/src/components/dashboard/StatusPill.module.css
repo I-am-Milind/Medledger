@@ -1,0 +1,57 @@
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.32rem;
+  min-height: 30px;
+  border-radius: 999px;
+  border: 1px solid #cedff7;
+  padding: 0.22rem 0.6rem;
+  font-size: 0.74rem;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 800;
+  white-space: nowrap;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.pill::before {
+  content: '';
+  width: 0.42rem;
+  height: 0.42rem;
+  border-radius: 999px;
+  background: currentColor;
+  opacity: 0.85;
+}
+
+.neutral {
+  border-color: #cedff7;
+  color: #2e608d;
+  background: #f4f9ff;
+}
+
+.success {
+  border-color: #b4e2d2;
+  color: #226e58;
+  background: #ecfdf6;
+}
+
+.warning {
+  border-color: #efcfaa;
+  color: #8e5300;
+  background: #fff8ec;
+}
+
+.danger {
+  border-color: #efc5bf;
+  color: #9b241c;
+  background: #fff2f0;
+}
+
+.info {
+  border-color: #bcd8f8;
+  color: #265d90;
+  background: #eef6ff;
+}

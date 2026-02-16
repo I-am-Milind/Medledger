@@ -1,0 +1,222 @@
+.dashboard {
+  display: grid;
+  gap: 0.85rem;
+  align-content: start;
+}
+
+.stats {
+  display: grid;
+  gap: 0.62rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.workspaceLayout {
+  display: grid;
+  gap: 0.85rem;
+  align-items: start;
+}
+
+.snapshotPanel,
+.quickPanel {
+  align-content: start;
+  height: 100%;
+}
+
+.profileSummary {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.profileImage,
+.profileImageFallback {
+  width: 88px;
+  height: 88px;
+  border-radius: 16px;
+  flex: 0 0 auto;
+}
+
+.profileImage {
+  object-fit: cover;
+  border: 1px solid #c5dcf8;
+  background: #ffffff;
+}
+
+.profileImageFallback {
+  border: 1px solid #c5dcf8;
+  background: linear-gradient(180deg, #edf6ff 0%, #d9ecff 100%);
+  color: #1f5c91;
+  font-size: 1.1rem;
+  font-weight: 900;
+  display: grid;
+  place-items: center;
+}
+
+.profileContent {
+  min-width: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.profileName {
+  margin: 0;
+  color: #123f66;
+  font-size: clamp(1rem, 1.25vw, 1.18rem);
+  font-weight: 900;
+}
+
+.profileIdentifier {
+  margin: 0;
+  color: #2f648f;
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.profileDetailList {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.profileDetail {
+  margin: 0;
+  color: #3a6387;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  overflow-wrap: anywhere;
+}
+
+.profileMetaLine {
+  margin: 0;
+  color: #3a6387;
+  font-size: 0.9rem;
+  line-height: 1.35;
+}
+
+.quickStats {
+  display: grid;
+  gap: 0.6rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.quickMetric {
+  border: 1px solid #d4e6fb;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #ffffff 0%, #f6fbff 100%);
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.metricIcon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 10px;
+  border: 1px solid #bed9f8;
+  background: #edf6ff;
+  color: #1f588d;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.metricIcon svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.metricLabel {
+  margin: 0;
+  color: #4a7192;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 800;
+}
+
+.metricValue {
+  margin: 0.06rem 0 0;
+  color: #133f66;
+  font-size: 1.14rem;
+  font-weight: 900;
+}
+
+.quickPanel .actions {
+  margin-top: 0.2rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.linkButton,
+.linkButtonAlt {
+  border-radius: 10px;
+  padding: 0.56rem 0.8rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.38rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.linkButton {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+.linkButtonAlt {
+  border: 1px solid #b9d8f8;
+  background: #f2f8ff;
+  color: #245a8f;
+}
+
+.empty {
+  margin: 0;
+  color: #3f6689;
+}
+
+.error {
+  margin: 0;
+  color: #b42318;
+}
+
+@media (min-width: 1024px) {
+  .workspaceLayout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .profileSummary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .quickStats {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

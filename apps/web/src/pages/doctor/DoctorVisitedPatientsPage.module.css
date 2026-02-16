@@ -1,0 +1,273 @@
+.page {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.panel {
+  align-content: start;
+}
+
+.searchLabel {
+  margin: 0;
+  color: #2d5f8e;
+  font-size: 0.79rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.searchField {
+  border: 1px solid #bdd8f8;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fcff 100%);
+  display: flex;
+  align-items: center;
+  min-height: 46px;
+  overflow: hidden;
+}
+
+.searchField:focus-within {
+  border-color: #52a3ea;
+  box-shadow: 0 0 0 3px rgba(38, 166, 154, 0.16);
+  background: #ffffff;
+}
+
+.searchIcon {
+  width: 2.5rem;
+  min-width: 2.5rem;
+  display: grid;
+  place-items: center;
+  color: #4e7698;
+}
+
+.searchIcon svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.searchInput {
+  width: 100%;
+  border: 0;
+  padding: 0.64rem 0.82rem 0.64rem 0;
+  background: transparent;
+  color: #0d1b2a;
+  font: inherit;
+}
+
+.searchInput:focus-visible {
+  outline: none;
+}
+
+.summaryLine {
+  margin: 0;
+  color: #2f5f8f;
+  font-weight: 700;
+}
+
+.list {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.compactCard {
+  border: 1px solid #d7e8fc;
+  border-radius: 12px;
+  background: #fbfdff;
+  overflow: hidden;
+}
+
+.cardHeaderButton {
+  border: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  padding: 0.62rem 0.7rem;
+  cursor: pointer;
+}
+
+.cardHeaderButton:hover {
+  background: linear-gradient(180deg, #fdfefe 0%, #eff7ff 100%);
+}
+
+.cardHeaderLeft {
+  min-width: 0;
+  text-align: left;
+}
+
+.expandLabel {
+  color: #2d628f;
+  font-size: 0.79rem;
+  font-weight: 800;
+}
+
+.itemTitle {
+  margin: 0;
+  color: #19466e;
+  font-weight: 800;
+}
+
+.itemMeta {
+  margin: 0.08rem 0 0;
+  color: #4d7191;
+  font-size: 0.82rem;
+}
+
+.cardBody {
+  border-top: 1px solid #e1eeff;
+  background: #fbfdff;
+  padding: 0.62rem 0.7rem 0.72rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.itemLine {
+  margin: 0;
+  color: #3a6387;
+  font-size: 0.9rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.linkButton,
+.buttonGhost,
+.buttonDanger {
+  border-radius: 10px;
+  padding: 0.52rem 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.linkButton {
+  border: 0;
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+.buttonGhost {
+  border: 1px solid #b9d8f8;
+  background: #f2f8ff;
+  color: #245a8f;
+}
+
+.buttonDanger {
+  border: 0;
+  background: #d43f3f;
+  color: #ffffff;
+}
+
+.empty {
+  margin: 0;
+  color: #3f6689;
+}
+
+.error {
+  margin: 0;
+  color: #b42318;
+}
+
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: rgba(9, 21, 34, 0.52);
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+}
+
+.modalCard {
+  width: min(920px, 100%);
+  max-height: calc(100dvh - 2rem);
+  overflow: auto;
+  border: 1px solid #cce1fb;
+  border-radius: 16px;
+  background: #ffffff;
+  padding: 1rem;
+  display: grid;
+  gap: 0.75rem;
+  box-shadow: 0 20px 38px rgba(10, 30, 50, 0.24);
+}
+
+.modalTitle {
+  margin: 0;
+  color: #194b76;
+}
+
+.modalSubtitle {
+  margin: 0;
+  color: #3e668a;
+}
+
+.reportGrid {
+  display: grid;
+  gap: 0.6rem;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+}
+
+.reportCard {
+  border: 1px solid #d4e6fb;
+  border-radius: 12px;
+  background: #f9fcff;
+  padding: 0.45rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.reportImage,
+.reportFrame {
+  width: 100%;
+  height: 170px;
+  border: 1px solid #d5e6fc;
+  border-radius: 9px;
+  background: #fff;
+  object-fit: cover;
+}
+
+.reportLink {
+  border: 1px dashed #b9d8f8;
+  border-radius: 9px;
+  min-height: 170px;
+  display: grid;
+  place-items: center;
+  color: #23598c;
+  text-decoration: none;
+  font-weight: 700;
+  background: #fff;
+}
+
+.reportMeta {
+  margin: 0;
+  color: #3b6387;
+  font-size: 0.83rem;
+}
+
+.reportMetaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.45rem;
+}
+
+@media (min-width: 1120px) {
+  .panel {
+    min-height: 74dvh;
+    max-height: 74dvh;
+    overflow: hidden;
+  }
+
+  .list {
+    min-height: 0;
+    max-height: calc(74dvh - 174px);
+    overflow-y: auto;
+    padding-right: 0.2rem;
+    align-content: start;
+  }
+}

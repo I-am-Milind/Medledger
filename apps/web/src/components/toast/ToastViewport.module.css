@@ -1,0 +1,99 @@
+.viewport {
+  position: fixed;
+  top: 0.82rem;
+  right: 0.82rem;
+  z-index: 110;
+  display: grid;
+  gap: 0.46rem;
+  pointer-events: none;
+}
+
+.toast {
+  width: min(360px, calc(100vw - 1.5rem));
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 14px 28px rgba(18, 47, 75, 0.2);
+  padding: 0.54rem 0.62rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.42rem;
+  pointer-events: auto;
+  animation: toastIn 180ms ease-out;
+}
+
+.icon {
+  width: 1.38rem;
+  height: 1.38rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toast p {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.close {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.success {
+  border-color: rgba(38, 166, 154, 0.42);
+  color: #1b6f67;
+}
+
+.success .icon {
+  background: rgba(38, 166, 154, 0.18);
+}
+
+.error {
+  border-color: rgba(211, 89, 89, 0.42);
+  color: #9d3434;
+}
+
+.error .icon {
+  background: rgba(211, 89, 89, 0.18);
+}
+
+.info {
+  border-color: rgba(69, 134, 194, 0.42);
+  color: #205f97;
+}
+
+.info .icon {
+  background: rgba(69, 134, 194, 0.18);
+}
+
+@keyframes toastIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 560px) {
+  .viewport {
+    top: 0.58rem;
+    right: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .toast {
+    width: 100%;
+  }
+}

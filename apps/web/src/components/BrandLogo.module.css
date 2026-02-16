@@ -1,0 +1,23 @@
+.logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 18px rgba(255, 255, 255, 0.2));
+}
+
+.sm {
+  max-width: 96px;
+}
+
+.md {
+  max-width: 140px;
+}
+
+.lg {
+  max-width: 210px;
+}
+
+.xl {
+  max-width: 320px;
+}
