@@ -2,7 +2,7 @@
   "name": "medledger",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "npm@10",
+  "packageManager": "npm@10.2.4",
   "engines": {
     "node": ">=20.19.0 || >=22.12.0"
   },
@@ -23,5 +23,8 @@
     "concurrently": "^9.2.1",
     "prettier": "^3.6.2",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "npm": "^11.10.0"
   }
 }
