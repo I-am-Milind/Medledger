@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MedLedger
 
 Role-secure cross-hospital medical platform monorepo:
@@ -138,3 +139,6 @@ npm run dev
 - API requires Firebase credentials via Application Default Credentials or service account env values.
 - For local development, set `FIREBASE_CLIENT_EMAIL` and `FIREBASE_PRIVATE_KEY` in `apps/api/.env` to avoid backend `500` on `/auth/session` or `/auth/bootstrap`.
 - Current Node in this environment is `20.17.0`; Vite `7.3.1` warns and recommends `20.19+` (or `22.12+`).
+=======
+# Medledger
+>>>>>>> 72f37638730d762aabe2775249899a0fddcb6881
